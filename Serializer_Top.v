@@ -4,6 +4,7 @@ module Serializer_Top #(
     input wire Ser_En,
     input wire RST,
     input wire clk,
+    input wire Data_Valid,
     input wire [7:0] P_Data_Top,
     output wire Ser_Data_Top,
     output wire Ser_Done
@@ -29,6 +30,9 @@ Serializer #(
 u_Serializer(
     .P_Data   (P_Data_Top   ),
     .clk      (clk      ),
+    .rst(RST),
+    .Ser_En(Ser_En),
+    .Data_Valid(Data_Valid),
     .Counter  (Counter_Top  ),
     .Ser_Data (Ser_Data_Top )
 );

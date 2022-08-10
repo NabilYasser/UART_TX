@@ -23,6 +23,7 @@ u_Serializer_Top(
     .Ser_En       (Ser_En       ),
     .RST          (RST          ),
     .clk          (clk          ),
+    .Data_Valid(Data_Valid_UART),
     .P_Data_Top   (P_Data_UART   ),
     .Ser_Data_Top (Ser_Data_Top ),
     .Ser_Done     (Ser_Done     )
